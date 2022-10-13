@@ -1,15 +1,15 @@
 @charset "UTF-8";
 
-*{
-  margin: 0;
-  padding: 0;
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 @font-face {
   font-family: idroid;
   src: url("../fontes/IDroid.otf") format('opentype');
+}
+
+*{
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -21,11 +21,18 @@
   --cor5: #063d1e;
 
   --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+  --fonte-destaque: "Bebas Neue", sans-serif;
+  font-size: normal;
+  --fonte-android:"idroid", arial, helvetica;
 }
 
 body {
   background-color: var(--cor1);
   font-family: var(--fonte-padrao);
+}
+
+body h2{
+  font-size: x-large;
 }
 
 header {
@@ -36,7 +43,7 @@ header {
 
 header > h1 {
   color: white;
-  font-family: "Bebas Neue", sans-serif;
+  font-family:var(--fonte-destaque) ;
   font-weight: lighter;
   padding-top: 40px;
   font-size: 40px;
@@ -45,7 +52,6 @@ header > h1 {
 
 header > p {
   color: white;
-  font-family: var(--fonte-padrao);
   font-size: 17px;
   padding-top: 1.3em;
   padding-inline: 10px;
@@ -63,7 +69,6 @@ nav > a {
   padding: 10px;
   text-decoration: none;
   font-weight: bold;
-  font-family: var(--fonte-padrao);
   transition-duration: 0.36s;
 }
 
@@ -77,7 +82,6 @@ nav > a:hover {
 main {
   background-color: white;
   color: var(--cor5);
-  font-weight: normal;
   font-size: 1.4em;
   min-width: 300px;
   max-width: 1000px;
@@ -91,25 +95,21 @@ main {
 }
 
 main h1 {
-  font-size: 1.1em;
-  font-family:"idroid", Arial, Helvetica, sans-serif;
+  font-family:var(--fonte-android);
 }
 
 main h2 {
   color: var(--cor5);
-  font-family: "idroid",Arial, Helvetica, sans-serif;
-  font-weight: lighter;
+  font-family: var(--fonte-android);
   background-image: linear-gradient(to right, var(--cor3), var(--cor1));
-  font-size: 20px;
 }
 
 main p {
   margin: 15px 0px;
-  font-family: var(--fonte-padrao);
   text-align: justify;
   text-indent: 30px;
   line-height: 1.5em;
-  font-size: 0.9em;
+
 }
 
 main strong {
@@ -166,15 +166,15 @@ aside {
 
 ul {
   columns: 2;
+  list-style: none;
 }
 
 aside > h3 {
   background-color: var(--cor4);
   color: white;
-  font-family: "idroid";
+  font-family: var(--fonte-android);
   padding: 10px;
   margin: -10px;
-  font-size: x-large;
   border-radius: 10px 10px 0px 0px;
 }
 
@@ -185,8 +185,8 @@ aside abbr:hover {
 footer {
   background-color: var(--cor5);
   color: white;
+  font-size: 1.2em;
   text-align: center;
-  font-size: 0.8px;
 }
 
 footer a {
